@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Fences</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[@ParentName="WoodenFenceBase" or @ParentName="MetalFenceBase"]/terrainAffordanceNeeded</xpath>
+			<value>
+				<terrainAffordanceNeeded>Waterproof</terrainAffordanceNeeded>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Architect Expanded - Fences</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@ParentName="WoodMetalFence" or @ParentName="WoodMetalGate" or @ParentName="WoodFence" or @ParentName="MetalFence" or @ParentName="MetalGate" and not(terrainAffordanceNeeded)]</xpath>
+					<value>
+						<terrainAffordanceNeeded/>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@ParentName="WoodMetalFence" or @ParentName="WoodMetalGate" or @ParentName="WoodFence" or @ParentName="MetalFence" or @ParentName="MetalGate"]/terrainAffordanceNeeded</xpath>
+					<value>
+						<terrainAffordanceNeeded>Waterproof</terrainAffordanceNeeded>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
