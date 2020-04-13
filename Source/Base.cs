@@ -13,8 +13,9 @@ namespace TrapsGoWet
             {
                 t.affordances.Add(waterproof);
             }
-            foreach (ThingDef t in DefDatabase<ThingDef>.AllDefs.Where(x => x.defName.Contains("Trap")))
+            foreach (ThingDef t in DefDatabase<ThingDef>.AllDefs.Where(x => x.defName.Contains("Trap") && x.terrainAffordanceNeeded != null))
             {
+                
                 t.terrainAffordanceNeeded = waterproof;
             }
         }

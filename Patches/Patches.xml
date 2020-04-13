@@ -4,6 +4,7 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Vanilla Fences</li>
+      <li>Vanilla Fences (Fence Tab)</li>
 		</mods>
 		<match Class="PatchOperationReplace">
 			<xpath>Defs/ThingDef[@ParentName="WoodenFenceBase" or @ParentName="MetalFenceBase"]/terrainAffordanceNeeded</xpath>
