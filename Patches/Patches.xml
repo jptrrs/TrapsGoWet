@@ -22,7 +22,7 @@
 			<success>Always</success>
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[@ParentName="WoodMetalFence" or @ParentName="WoodMetalGate" or @ParentName="WoodFence" or @ParentName="MetalFence" or @ParentName="MetalGate" and not(terrainAffordanceNeeded)]</xpath>
+					<xpath>Defs/ThingDef[(@ParentName="WoodMetalFence" or @ParentName="WoodMetalGate" or @ParentName="WoodFence" or @ParentName="MetalFence" or @ParentName="MetalGate") and not(terrainAffordanceNeeded)]</xpath>
 					<value>
 						<terrainAffordanceNeeded/>
 					</value>
