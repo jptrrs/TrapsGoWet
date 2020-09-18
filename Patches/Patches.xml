@@ -22,13 +22,42 @@
 			<success>Always</success>
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[(@ParentName="WoodMetalFence" or @ParentName="WoodMetalGate" or @ParentName="WoodFence" or @ParentName="MetalFence" or @ParentName="MetalGate") and not(terrainAffordanceNeeded)]</xpath>
+					<xpath>Defs/ThingDef[(@ParentName="WoodMetalFence" or @ParentName="WoodMetalGate" or @ParentName="WoodFence" or @ParentName="MetalFence" or @ParentName="MetalGate" or @ParentName="AllMaterialFence") and not(terrainAffordanceNeeded)]</xpath>
 					<value>
 						<terrainAffordanceNeeded/>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@ParentName="WoodMetalFence" or @ParentName="WoodMetalGate" or @ParentName="WoodFence" or @ParentName="MetalFence" or @ParentName="MetalGate"]/terrainAffordanceNeeded</xpath>
+					<xpath>Defs/ThingDef[@ParentName="WoodMetalFence" or @ParentName="WoodMetalGate" or @ParentName="WoodFence" or @ParentName="MetalFence" or @ParentName="MetalGate" or @ParentName="AllMaterialFence"]/terrainAffordanceNeeded</xpath>
+					<value>
+						<terrainAffordanceNeeded>Waterproof</terrainAffordanceNeeded>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Dubs Bad Hygiene</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<!--<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="SewageOutlet" or @ParentName="DubsDirtyPipeBase"]/terrainAffordanceNeeded</xpath>
+          <value>
+            <terrainAffordanceNeeded>Waterproof</terrainAffordanceNeeded>
+          </value>
+				</li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[]/terrainAffordanceNeeded</xpath>
+          <value>
+            <terrainAffordanceNeeded>Waterproof</terrainAffordanceNeeded>
+          </value>
+        </li>-->
+        <li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="SewageOutlet" or @ParentName="DubsDirtyPipeBase"]</xpath>
 					<value>
 						<terrainAffordanceNeeded>Waterproof</terrainAffordanceNeeded>
 					</value>

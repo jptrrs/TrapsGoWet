@@ -10,14 +10,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About", "About", "{C60094AD
 		About\About.xml = About\About.xml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patches", "Patches", "{06437E8A-C80D-4FF0-A298-81C81DC31A40}"
-	ProjectSection(SolutionItems) = preProject
-		Patches\Patches = Patches\Patches
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Defs", "Defs", "{0E276CBB-A9A2-4D9C-A9C0-B0F4BD278412}"
 	ProjectSection(SolutionItems) = preProject
 		Defs\TerrainAffordances.xml = Defs\TerrainAffordances.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patches", "Patches", "{571802F1-0F2E-4640-BD8E-A4B972F4B8DE}"
+	ProjectSection(SolutionItems) = preProject
+		Patches\Patches.xml = Patches\Patches.xml
 	EndProjectSection
 EndProject
 Global
