@@ -17,6 +17,7 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Architect Expanded - Fences</li>
+      <li>Architect Expanded - Fences (Continued)</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<success>Always</success>
