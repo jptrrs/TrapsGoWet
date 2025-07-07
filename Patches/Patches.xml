@@ -56,33 +56,4 @@
 		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Dubs Bad Hygiene</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<success>Normal</success>
-			<operations>
-				<!--<li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="SewageOutlet" or @ParentName="DubsDirtyPipeBase"]/terrainAffordanceNeeded</xpath>
-          <value>
-            <terrainAffordanceNeeded>Waterproof</terrainAffordanceNeeded>
-          </value>
-				</li>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[]/terrainAffordanceNeeded</xpath>
-          <value>
-            <terrainAffordanceNeeded>Waterproof</terrainAffordanceNeeded>
-          </value>
-        </li>-->
-        <li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="SewageOutlet" or @ParentName="DubsDirtyPipeBase"]</xpath>
-					<value>
-						<terrainAffordanceNeeded>Waterproof</terrainAffordanceNeeded>
-					</value>
-				</li>
-			</operations>
-		</match>
-	</Operation>
-
 </Patch>
