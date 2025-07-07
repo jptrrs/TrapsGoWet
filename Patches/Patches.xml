@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+  <Operation Class="PatchOperationSequence">
+    <success>Normal</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Fence"]/terrainAffordanceNeeded</xpath>
+					<value>
+						<terrainAffordanceNeeded>Waterproof</terrainAffordanceNeeded>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Fence"]/useStuffTerrainAffordance</xpath>
+					<value>
+						<useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+					</value>
+				</li>
+			</operations>
+    </Operation>
+
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Vanilla Fences</li>
